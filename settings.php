@@ -2,16 +2,16 @@
 
 // Invoice Settings.
 
-$business_name = 'Circa75 Media, LLC';
-$business_email = 'contact@circa75.co';
+$business_name = 'Corali Signs & Graphic Designs';
+$business_email = 'info@designisdesign.eu';
 $avatar_image = true;
 
 // Currency Settings.
 
-$currency = 'en_US';
-$tax_percentage = '5';
+$currency = 'el_GR';
+$tax_percentage = '24';
 
 // Stripe Live Settings.
 
-$stripe_secret_key = 'sk_test_1975';
-$stripe_publishable_key = 'pk_test_1975';
+$stripe_secret_key = '';
+$stripe_publishable_key = '';

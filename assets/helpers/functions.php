@@ -139,7 +139,7 @@ function get_invoice($part) {
         ?>
         <li class="row item">
             <h3><span class="description"><?php echo($invoice_item[0]); ?></span><span class="units"><?php echo($invoice_item[1]); ?></span></h3>
-            <span class="amount"><?php echo(money_format('%n', str_replace(array("\n"), '', $invoice_item[2]))); ?></span>
+            <span class="amount"><?php $item_cost = money_format('%i', str_replace(array("\n"), '', $invoice_item[2])); echo str_replace('EUR','&euro;',$item_cost); ?></span>
         </li>
         <?php }
     }
@@ -172,15 +172,18 @@ function get_invoice($part) {
         } 
         
         if($part == 'subtotal') {
-            echo(money_format('%n', $subtotal));
+            $subtotal = money_format('%i', $subtotal);
+            echo str_replace('EUR','&euro;',$subtotal);
         }
         
         if($part == 'tax') {
-            echo(money_format('%n', $tax));
+            $tax = money_format('%i', $tax);
+            echo str_replace('EUR','&euro;',$tax);
         }
         
         if($part == 'total') {
-            echo(money_format('%n', $total));
+            $total = money_format('%i', $total);
+            echo str_replace('EUR','&euro;',$total);
         }
         
         if($part == 'stripe') {
