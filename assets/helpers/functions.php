@@ -162,7 +162,7 @@ function get_invoice($part) {
             $invoice_item = explode(' - ', $invoice_items);
             
             // Add up the item totals.
-            $subtotal += $invoice_item[2];
+            $subtotal += (float)$invoice_item[2];
             
             // The tax.
             $tax = ($tax_percentage / 100) * $subtotal;
